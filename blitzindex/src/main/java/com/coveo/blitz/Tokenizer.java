@@ -24,7 +24,7 @@ public class Tokenizer implements java.io.Serializable {
 
 	public void setIndividualWords(String listOfWords) {
 		individualWords.clear();
-		if(!listOfWords.isEmpty())
+		if(listOfWords != null && !listOfWords.isEmpty())
 		{
 			listOfWords = listOfWords.toLowerCase();
 			String[] temp = listOfWords.split(" ");
