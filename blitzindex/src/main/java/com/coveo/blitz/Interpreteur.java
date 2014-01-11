@@ -42,6 +42,8 @@ public class Interpreteur {
 			}
 			
 		}
+		
+		System.out.println("Interpreteur builded");
 
 	}
 	

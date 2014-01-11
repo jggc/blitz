@@ -34,6 +34,7 @@ public class Index {
 	}
 	
 	public List<QueryResult> search(String s){
+		System.out.println("Searching string : "+s);
 		List<QueryResult> results = new ArrayList<QueryResult>();
 		for( Document d : docs){
 			if(d.match(s))
@@ -42,6 +43,7 @@ public class Index {
 		return results;
 	}
 	public List<QueryResult> getAllId() {
+		System.out.println("Get all id");
 		List<QueryResult> ids = new ArrayList<QueryResult>(docs.size());
 		for(Document d : docs){
 			ids.add(new QueryResult(d.getType(), d.getId()));
