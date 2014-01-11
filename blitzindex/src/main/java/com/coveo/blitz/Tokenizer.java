@@ -18,21 +18,14 @@ public class Tokenizer implements java.io.Serializable {
 	}
 
 	public void setIndividualWords(String listOfWords) {
-		try
-		{
-			System.out.println("set indidual words");
-			listOfWords = listOfWords.toLowerCase();
-			individualWords = listOfWords.split(" ");
-			System.out.println("entering for");
-			for(int i=0; i<individualWords.length;i++)
-			{		
-				individualWords[i] = individualWords[i].replaceAll("[^A-Za-z0-9]", "");
-			}
+
+		listOfWords = listOfWords.toLowerCase();
+		individualWords = listOfWords.split(" ");
+		for(int i=0; i<individualWords.length;i++)
+		{		
+			individualWords[i] = individualWords[i].replaceAll("[^A-Za-z0-9]", "");
 		}
-		catch(Exception e)
-		{
-			System.out.println("BONJOUR");
-		}
+
 	}
 	
 
