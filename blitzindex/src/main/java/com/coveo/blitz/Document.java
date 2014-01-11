@@ -5,11 +5,11 @@ import java.util.List;
 import com.coveo.blitz.thrift.DocumentType;
 
 public class Document {
-	private int id;
+	private String id;
 	private String[] tokens;
 	private DocumentType type;
 	
-	public Document(int id, String[] tokens, DocumentType type) {
+	public Document(String id, String[] tokens, DocumentType type) {
 		this.id = id;
 		this.tokens = tokens;
 		this.type = type;
@@ -24,7 +24,7 @@ public class Document {
 		return false;
 	}
 	
-	public int getId() {
+	public String getId() {
 		return this.id;
 	}
 	
