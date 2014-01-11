@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Document {
 	private int id;
-	private List<String> tokens;
+	private String[] tokens;
 	
-	public Document(int id, List<String> tokens) {
+	public Document(int id, String[] tokens) {
 		this.id = id;
 		this.tokens = tokens;
 	}
