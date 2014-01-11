@@ -30,7 +30,7 @@ public class Index {
 		docs.add(new Document(Integer.parseInt(albumToIndex.getId()), tokens));
 	}
 	
-	public List<Integer> searchArtist(String s){
+	public List<Integer> search(String s){
 		List<Integer> results = new ArrayList<Integer>();
 		for( Document d : docs){
 			if(d.match(s))
