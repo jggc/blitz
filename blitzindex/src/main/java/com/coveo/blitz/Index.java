@@ -29,6 +29,7 @@ public class Index {
 	public void indexAlbum(Album albumToIndex) {
 		tokenizer.setIndividualWords(albumToIndex.text);
 		String[] tokens = tokenizer.getIndividualWords();
+		docs.add(new Document(albumToIndex.getId(), tokens, DocumentType.ALBUM));
 	}
 	
 	public List<QueryResult> search(String s){
