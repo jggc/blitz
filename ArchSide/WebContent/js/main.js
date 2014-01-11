@@ -1,5 +1,5 @@
 function request(value){
-	$.ajax('query.jsp',{
+	$.ajax('frontend/query.jsp',{
 				type : 'json',
 				dataType : 'json',
 				data : { 'val1' : value},
@@ -11,5 +11,5 @@ function request(value){
 				error : function(data){
 					console.log("Erreur pendant la requête");
 				}
-			})
+			});
 }
