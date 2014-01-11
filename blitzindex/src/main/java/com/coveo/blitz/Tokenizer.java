@@ -14,7 +14,9 @@ public class Tokenizer implements java.io.Serializable {
 	}
 
 	public String[] getIndividualWords() {
-		return individualWords;
+		//return individualWords;
+		String[] returnValue = {"hello","bonjour"};
+		return returnValue;
 	}
 
 	public void setIndividualWords(String listOfWords) {
