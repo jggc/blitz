@@ -29,12 +29,6 @@ public class Tokenizer implements java.io.Serializable {
 		}
 	}
 	
-	public String[] removeInvalidCharacters(String[] individualWords)
-	{
-		
-		
-		return individualWords;
-	}
 
 	@Override
 	public String toString() {

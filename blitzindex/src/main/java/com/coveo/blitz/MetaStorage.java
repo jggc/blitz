@@ -73,8 +73,8 @@ public class MetaStorage {
 		}
 		return null;
 	}
-
-	public void testWriter() {
+	//Used to test serialization and deserialization if everything works fine it should be deleted (further testing may be necessary for now
+	/*public void testWriter() {
 		Tokenizer testToken = new Tokenizer();
 		testToken.setIndividualWords("criss34 de caliss de marde");
 		try {
@@ -87,7 +87,7 @@ public class MetaStorage {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public Tokenizer TestReadToken(String id) {
 		try {
 
@@ -104,12 +104,12 @@ public class MetaStorage {
 		}
 		return null;
 
-	}
+	}*/
 
 	public static void main(String[] args) {
 		MetaStorage test = new MetaStorage();
-		test.testWriter();
-		test.TestReadToken("token1");
+		/*test.testWriter();
+		test.TestReadToken("token1");*/
 
 	}
 }

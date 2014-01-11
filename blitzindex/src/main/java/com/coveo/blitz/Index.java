@@ -38,13 +38,11 @@ public class Index {
 		}
 		return results;
 	}
-	
 	public int[] getAllId() {
 		int[] ids = new int[docs.size()];
 		for(int i = 0; i < docs.size(); i++){
 			ids[i] = docs.get(i).getId();
 		}
-		
 		return ids;
 	}
 }
