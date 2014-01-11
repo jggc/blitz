@@ -27,19 +27,12 @@ public class Index {
 	}
 	
 	public void indexAlbum(Album albumToIndex) {
-		System.out.println("tokenizing");
-		try{
-			tokenizer.setIndividualWords(albumToIndex.text);
-			String[] tokens = tokenizer.getIndividualWords();
-		}
-		catch(Exception e){
-			System.out.println("bonjour!");
-		}
-		System.out.println("adding");
+		tokenizer.setIndividualWords(albumToIndex.text);
+		String[] tokens = tokenizer.getIndividualWords();
+		docs.add(new Document(albumToIndex.getId(), tokens, DocumentType.ALBUM));
 	}
 	
 	public List<QueryResult> search(String s){
-		System.out.println("Searching string : "+s);
 		List<QueryResult> results = new ArrayList<QueryResult>();
 		for( Document d : docs){
 			if(d.match(s))
@@ -48,7 +41,6 @@ public class Index {
 		return results;
 	}
 	public List<QueryResult> getAllId() {
-		System.out.println("Get all id");
 		List<QueryResult> ids = new ArrayList<QueryResult>(docs.size());
 		for(Document d : docs){
 			ids.add(new QueryResult(d.getType(), d.getId()));

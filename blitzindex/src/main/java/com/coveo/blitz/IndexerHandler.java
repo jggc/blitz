@@ -16,13 +16,11 @@ public class IndexerHandler implements Iface {
 	
 	public void indexArtist(Artist artistToIndex) throws TException {
 		
-		System.out.println("Artist " + artistToIndex.getId());
 		index.indexArtist(artistToIndex);
 	}
 
 	public void indexAlbum(Album albumToIndex) throws TException {
 		
-		System.out.println("Album " + albumToIndex.getId());
 		index.indexAlbum(albumToIndex);
 	}
 
