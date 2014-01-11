@@ -27,14 +27,6 @@ public class IndexerHandler implements Iface {
 		System.out.println("Query " + query.getRootId());
 		
 		
-		// cas étoile!
-		if(query.queryTreeNodes.size() == 1 && query.queryTreeNodes.get(0).type == NodeType.LITERAL && query.queryTreeNodes.get(0).value == "*")
-		{
-			
-	
-		}
-		
-
 		
 		
 		return new QueryResponse();
