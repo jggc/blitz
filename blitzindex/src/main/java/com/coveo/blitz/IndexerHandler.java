@@ -28,14 +28,14 @@ public class IndexerHandler implements Iface {
 	public QueryResponse query(Query query) throws TException {
 		System.out.println("Query " + query.getRootId());
 		
+		Interpreteur interpreteur = new Interpreteur(query, index);
 		
-		
-		
-		return new QueryResponse();
+		return interpreteur.getResponse();
 	}
 
 	public void reset() throws TException {
 		System.out.println("Reset");
+		index = new Index();
 	}
 
 	public void ping() throws TException {
