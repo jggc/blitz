@@ -1,7 +1,6 @@
 package blitz;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Index
+ * Servlet implementation class HomePage
  */
-@WebServlet(name = "BlitzIndex", urlPatterns = { "/BlitzIndex" })
-public class Index extends HttpServlet {
+@WebServlet("/HomePage")
+public class HomePage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Index() {
+    public HomePage() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,8 +27,6 @@ public class Index extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		getServletContext().getRequestDispatcher("/frontend/index.html").forward(request, response);
-
 	}
 
 	/**
@@ -37,11 +34,6 @@ public class Index extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.setCharacterEncoding("UTF-8");
-		request.setCharacterEncoding("UTF-8");
-		
-		
-		getServletContext().getRequestDispatcher("/frontend/index.html").forward(request, response);
 	}
 
 }
