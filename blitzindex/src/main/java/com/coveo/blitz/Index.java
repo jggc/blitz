@@ -28,8 +28,13 @@ public class Index {
 	
 	public void indexAlbum(Album albumToIndex) {
 		System.out.println("tokenizing");
-		tokenizer.setIndividualWords(albumToIndex.text);
-		String[] tokens = tokenizer.getIndividualWords();
+		try{
+			tokenizer.setIndividualWords(albumToIndex.text);
+			String[] tokens = tokenizer.getIndividualWords();
+		}
+		catch(Exception e){
+			System.out.println("bonjour!");
+		}
 		System.out.println("adding");
 	}
 	
