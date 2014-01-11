@@ -23,27 +23,27 @@ public class Index {
 	public void indexArtist(Artist artistToIndex) {
 		tokenizer.setIndividualWords(artistToIndex.text);
 		String[] tokens = tokenizer.getIndividualWords();
-		docs.add(new Document(Integer.parseInt(artistToIndex.getId()), tokens, DocumentType.ARTIST));
+		docs.add(new Document(artistToIndex.getId(), tokens, DocumentType.ARTIST));
 	}
 	
 	public void indexAlbum(Album albumToIndex) {
 		tokenizer.setIndividualWords(albumToIndex.text);
 		String[] tokens = tokenizer.getIndividualWords();
-		docs.add(new Document(Integer.parseInt(albumToIndex.getId()), tokens, DocumentType.ALBUM));
+		docs.add(new Document(albumToIndex.getId(), tokens, DocumentType.ALBUM));
 	}
 	
 	public List<QueryResult> search(String s){
 		List<QueryResult> results = new ArrayList<QueryResult>();
 		for( Document d : docs){
 			if(d.match(s))
-				results.add(new QueryResult(d.getType(), Integer.toString(d.getId())));
+				results.add(new QueryResult(d.getType(), d.getId()));
 		}
 		return results;
 	}
 	public List<QueryResult> getAllId() {
 		List<QueryResult> ids = new ArrayList<QueryResult>(docs.size());
 		for(Document d : docs){
-			ids.add(new QueryResult(d.getType(), Integer.toString(d.getId())));
+			ids.add(new QueryResult(d.getType(), d.getId()));
 		}
 		return ids;
 	}
