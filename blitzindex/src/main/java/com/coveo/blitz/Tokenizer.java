@@ -35,7 +35,7 @@ public class Tokenizer implements java.io.Serializable {
 	}
 
 	public static void main(String[] args) {
-		String testString = "Les oiseaus sont mes Am.;'Is 34f.23 et le rush< de faire le blitz: est cool[] !";
+		String testString = "";
 		Tokenizer tok = new Tokenizer();
 		tok.setIndividualWords(testString);
 		System.out.println(tok.toString());

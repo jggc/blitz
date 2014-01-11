@@ -20,7 +20,7 @@ public class Interpreteur {
 		{
 			QueryTreeNode node = query.queryTreeNodes.get(0);
 			// étoile!
-			if(node.type == NodeType.LITERAL && node.value == "*")
+			//if(node.type == NodeType.LITERAL && node.value == "*")
 			{
 				 List<QueryResult> liste = index.getAllId();
 				 Iterator<QueryResult> it = liste.iterator();
@@ -31,15 +31,15 @@ public class Interpreteur {
 			}
 			
 			// literal
-			else if(node.type == NodeType.LITERAL)
-			{
-				 List<QueryResult> liste = index.search(node.value);
-				 Iterator<QueryResult> it = liste.iterator();
-				 while(it.hasNext())
-				 {
-					 returnValue.addToResults(it.next());
-				 }
-			}
+//			else if(node.type == NodeType.LITERAL)
+//			{
+//				 List<QueryResult> liste = index.search(node.value);
+//				 Iterator<QueryResult> it = liste.iterator();
+//				 while(it.hasNext())
+//				 {
+//					 returnValue.addToResults(it.next());
+//				 }
+//			}
 			
 		}
 		
