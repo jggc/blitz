@@ -19,6 +19,7 @@ public class Document {
 		}
 		return false;
 	}
+	
 	public int getId() {
 		return this.id;
 	}
