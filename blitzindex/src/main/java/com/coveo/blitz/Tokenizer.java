@@ -39,9 +39,6 @@ public class Tokenizer implements java.io.Serializable {
 		Tokenizer tok = new Tokenizer();
 		tok.setIndividualWords(testString);
 		System.out.println(tok.toString());
-		
-		
-
 	}
 
 }

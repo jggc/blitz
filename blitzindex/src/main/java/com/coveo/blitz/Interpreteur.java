@@ -16,6 +16,7 @@ public class Interpreteur {
 	
 	public Interpreteur(Query query, Index index)
 	{
+		returnValue = new QueryResponse();
 		if(query.queryTreeNodes.size() == 1)
 		{
 			QueryTreeNode node = query.queryTreeNodes.get(0);
