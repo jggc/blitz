@@ -10,8 +10,12 @@ import com.coveo.blitz.thrift.QueryResponse;
 
 public class IndexerHandler implements Iface {
 
+	
+	
+	
 	public void indexArtist(Artist artistToIndex) throws TException {
 		System.out.println("Artist " + artistToIndex.getId());
+		
 	}
 
 	public void indexAlbum(Album albumToIndex) throws TException {
