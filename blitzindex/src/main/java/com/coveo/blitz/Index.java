@@ -27,8 +27,10 @@ public class Index {
 	}
 	
 	public void indexAlbum(Album albumToIndex) {
+		System.out.println("tokenizing");
 		tokenizer.setIndividualWords(albumToIndex.text);
 		String[] tokens = tokenizer.getIndividualWords();
+		System.out.println("adding");
 		docs.add(new Document(Integer.parseInt(albumToIndex.getId()), tokens, DocumentType.ALBUM));
 	}
 	
