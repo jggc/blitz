@@ -5,12 +5,13 @@ import org.apache.thrift.TException;
 import com.coveo.blitz.thrift.Album;
 import com.coveo.blitz.thrift.Artist;
 import com.coveo.blitz.thrift.Indexer.Iface;
+import com.coveo.blitz.thrift.NodeType;
 import com.coveo.blitz.thrift.Query;
 import com.coveo.blitz.thrift.QueryResponse;
 
 public class IndexerHandler implements Iface {
 
-	
+	private Index index = new Index();
 	
 	
 	public void indexArtist(Artist artistToIndex) throws TException {
@@ -24,6 +25,18 @@ public class IndexerHandler implements Iface {
 
 	public QueryResponse query(Query query) throws TException {
 		System.out.println("Query " + query.getRootId());
+		
+		
+		// cas étoile!
+		if(query.queryTreeNodes.size() == 1 && query.queryTreeNodes.get(0).type == NodeType.LITERAL && query.queryTreeNodes.get(0).value == "*")
+		{
+			
+	
+		}
+		
+
+		
+		
 		return new QueryResponse();
 	}
 
