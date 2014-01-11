@@ -21,6 +21,7 @@ public class ArbreRequete {
 		public NoeudRequete(NodeType p_type, String p_value)
 		{
 			type = p_type;
+			value = p_value;
 			
 		}
 	}
