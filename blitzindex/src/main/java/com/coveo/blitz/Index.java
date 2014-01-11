@@ -40,10 +40,10 @@ public class Index {
 		}
 		return results;
 	}
-	public int[] getAllId() {
-		int[] ids = new int[docs.size()];
-		for(int i = 0; i < docs.size(); i++){
-			ids[i] = docs.get(i).getId();
+	public List<QueryResult> getAllId() {
+		List<QueryResult> ids = new ArrayList<QueryResult>(docs.size());
+		for(Document d : docs){
+			ids.add(new QueryResult(d.getType(), Integer.toString(d.getId())));
 		}
 		return ids;
 	}
